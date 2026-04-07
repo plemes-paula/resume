@@ -1,0 +1,270 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@300;400;500&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .tabs { display: flex; gap: 0; border-bottom: 0.5px solid var(--color-border-tertiary); margin-bottom: 0; }
+  .tab-btn { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 20px; background: none; border: none; border-bottom: 2px solid transparent; color: var(--color-text-tertiary); cursor: pointer; }
+  .tab-btn.active { color: var(--color-text-primary); border-bottom-color: var(--color-text-primary); }
+  .cv-panel { display: none; }
+  .cv-panel.active { display: block; }
+  .cv { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 400; line-height: 1.65; color: var(--color-text-primary); background: var(--color-background-primary); max-width: 820px; margin: 0 auto; padding: 2rem 2rem 3rem; }
+  .header { border-bottom: 0.5px solid var(--color-border-tertiary); padding-bottom: 1.5rem; margin-bottom: 1.5rem; }
+  .header-name { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 300; letter-spacing: 0.02em; line-height: 1.1; color: var(--color-text-primary); }
+  .header-title { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-secondary); margin-top: 6px; }
+  .header-contacts { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 1rem; font-size: 12px; color: var(--color-text-secondary); }
+  .header-contacts a { color: var(--color-text-secondary); text-decoration: none; border-bottom: 0.5px solid var(--color-border-secondary); }
+  .layout { display: grid; grid-template-columns: 1fr 220px; gap: 0 2.5rem; align-items: start; }
+  .section { margin-bottom: 1.75rem; }
+  .section-label { font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-text-tertiary); border-bottom: 0.5px solid var(--color-border-tertiary); padding-bottom: 6px; margin-bottom: 1rem; }
+  .resumo p { font-size: 13px; line-height: 1.75; color: var(--color-text-secondary); }
+  .exp-item { margin-bottom: 1.25rem; }
+  .exp-header { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .exp-role { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
+  .exp-period { font-size: 11px; color: var(--color-text-tertiary); white-space: nowrap; }
+  .exp-company { font-size: 12px; color: var(--color-text-secondary); margin: 2px 0 8px; font-style: italic; }
+  .exp-bullets { list-style: none; padding: 0; }
+  .exp-bullets li { font-size: 12.5px; color: var(--color-text-secondary); padding: 3px 0 3px 14px; position: relative; line-height: 1.6; }
+  .exp-bullets li::before { content: '–'; position: absolute; left: 0; color: var(--color-text-tertiary); }
+  .proj-item { margin-bottom: 12px; }
+  .proj-name { font-weight: 500; font-size: 12.5px; color: var(--color-text-primary); }
+  .proj-desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.55; margin-top: 2px; }
+  .sidebar-section { margin-bottom: 1.75rem; }
+  .skills-grid { display: flex; flex-direction: column; gap: 6px; }
+  .skill-tag { font-size: 11.5px; color: var(--color-text-secondary); padding: 5px 10px; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); background: var(--color-background-secondary); line-height: 1.4; }
+  .skill-tag.highlight { border-color: var(--color-border-secondary); color: var(--color-text-primary); }
+  .soft-list { display: flex; flex-direction: column; gap: 5px; }
+  .soft-item { font-size: 12px; color: var(--color-text-secondary); padding-left: 12px; position: relative; line-height: 1.5; }
+  .soft-item::before { content: '·'; position: absolute; left: 0; color: var(--color-text-tertiary); font-size: 16px; line-height: 1.1; }
+  .cert-list { display: flex; flex-direction: column; gap: 6px; }
+  .cert-item { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+  .cert-issuer { font-size: 11px; color: var(--color-text-tertiary); }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 1rem 0; }
+</style>
+
+<div class="tabs">
+  <button class="tab-btn active" onclick="showTab('pt', this)">Português</button>
+  <button class="tab-btn" onclick="showTab('en', this)">English</button>
+</div>
+
+<div id="pt" class="cv-panel active">
+<div class="cv">
+  <div class="header">
+    <div class="header-name">Paula Lemes</div>
+    <div class="header-title">Design &amp; Growth Partner</div>
+    <div class="header-contacts">
+      <span>+55 11 98462-8938</span>
+      <a href="mailto:comunicadigital.id@gmail.com">comunicadigital.id@gmail.com</a>
+      <a href="https://linkedin.com/in/paulalemes" target="_blank">linkedin.com/in/paulalemes</a>
+      <a href="https://behance.net/paulalemesperfil" target="_blank">behance.net/paulalemesperfil</a>
+    </div>
+  </div>
+  <div class="layout">
+    <div class="main">
+      <div class="section resumo">
+        <div class="section-label">Resumo</div>
+        <p>Parceira de criação e estratégia para marcas que precisam de consistência visual e crescimento real. Atuo na interseção entre identidade de marca, produção digital e lançamentos — integrando design editorial, motion e estratégia de conteúdo em um fluxo coeso. Com atuação junto a clientes no Brasil, Portugal, EUA e Europa, meu foco está em elevar o posicionamento da marca sem abrir mão da fluidez operacional.</p>
+      </div>
+      <div class="section">
+        <div class="section-label">Experiência</div>
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-role">Growth &amp; Design Partner</span>
+            <span class="exp-period">Out 2021 – Presente</span>
+          </div>
+          <div class="exp-company">Freelance &amp; Consultoria</div>
+          <ul class="exp-bullets">
+            <li>Desenvolvimento e gestão de ecossistemas visuais para marcas e eventos, garantindo consistência estética em múltiplos pontos de contato — digital e impresso.</li>
+            <li>Aplicação de técnicas de colagem digital e estética contemporânea para diferenciação de marca e conteúdo de alto valor percebido.</li>
+            <li>Estruturação de layouts para produtos digitais e materiais educativos, priorizando clareza e autoridade visual.</li>
+            <li>Estratégia de conteúdo e gestão de lançamentos digitais, incluindo ativação cross-platform e campanhas de e-mail marketing.</li>
+            <li>Parceria com clientes no Brasil, Portugal, EUA, Bélgica e África do Sul — gestão de cronogramas, prioridades e entregas.</li>
+          </ul>
+        </div>
+        <hr class="divider">
+        <div class="section-label" style="margin-top:1rem;">Projetos em Destaque</div>
+        <div class="proj-item">
+          <div class="proj-name">The Secret Leadership Playbook - Africa do Sul</div>
+          <div class="proj-desc">Direção criativa, narrativa visual, desenvolvimento de peças gráficas e de vídeo. Direção estratégica e produção completa do lançamento de produto digital premium voltado a executivos C-suite norte-americanos. Gestão de conteúdo, ativação cross-platform (LinkedIn, Instagram, TikTok), campanha de e-mail marketing e materiais interativos em HTML.</div>
+        </div>
+        <div class="proj-item">
+          <div class="proj-name">Dental&amp;Beer / EuroOdonto — Bélgica</div>
+          <div class="proj-desc">Parceria contínua com dois dentistas brasileiros radicados na Bélgica. Suporte visual e estratégico na transição da marca — de masterclasses odontológicas + experiências culturais para a EuroOdonto, plataforma de assessoria para dentistas que querem validar o diploma na Europa. Atualmente estruturando documentos de qualificação de clientes e apresentação comercial para marcar a nova fase.</div>
+        </div>
+        <div class="proj-item">
+          <div class="proj-name">Made4Smile - Brasil</div>
+          <div class="proj-desc">Produção completa de e-book para dentistas abrindo o primeiro consultório: pesquisa de mercado, curadoria visual, construção do produto digital e pré-lançamento com estratégia de conteúdo e anúncios online. Projeto em pausa, aguardando fase de lançamento.</div>
+        </div>
+        <div class="proj-item">
+          <div class="proj-name">Talento Total - Brasil/EUA</div>
+          <div class="proj-desc">Concepção visual de evento presencial: colagens digitais, design de apresentações e experiência de marca imersiva.</div>
+        </div>
+        <div class="proj-item">
+          <div class="proj-name">Collage digital para livros escolares - Brasil</div>
+          <div class="proj-desc">Desenvolvimento de capas e projetos gráficos com foco em educação e tecnologia.</div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="sidebar-section">
+        <div class="section-label">Hard Skills</div>
+        <div class="skills-grid">
+          <div class="skill-tag highlight">Adobe Illustrator</div>
+          <div class="skill-tag highlight">Adobe Photoshop</div>
+          <div class="skill-tag highlight">After Effects</div>
+          <div class="skill-tag highlight">Premiere Pro</div>
+          <div class="skill-tag highlight">InDesign</div>
+          <div class="skill-tag">HTML básico</div>
+          <div class="skill-tag">Canva Pro</div>
+          <div class="skill-tag">CapCut</div>
+          <div class="skill-tag">Notion / Asana / ClickUp</div>
+          <div class="skill-tag">Mailchimp</div>
+          <div class="skill-tag">Ferramentas de IA Generativa Aplicada</div>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="section-label">Soft Skills</div>
+        <div class="soft-list">
+          <div class="soft-item">Gestão de projetos e prazos</div>
+          <div class="soft-item">Comunicação com clientes internacionais</div>
+          <div class="soft-item">Absorção ágil de feedbacks</div>
+          <div class="soft-item">Visão estratégica de marca</div>
+          <div class="soft-item">Curadoria visual e editorial</div>
+          <div class="soft-item">Autonomia e autoliderança</div>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="section-label">Formação &amp; Certificações</div>
+        <div class="cert-list">
+          <div class="cert-item">Técnico em Administração<div class="cert-issuer">Senac EAD</div></div>
+          <div class="cert-item">Cientista do Marketing<div class="cert-issuer">V4 Company</div></div>
+          <div class="cert-item">Projetos Ágeis (SCRUM)<div class="cert-issuer">Digital Innovation One</div></div>
+          <div class="cert-item">Design &amp; Tráfego<div class="cert-issuer">Comunidade Sobral / Lucas Viana</div></div>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="section-label">Idiomas</div>
+        <div class="soft-list">
+          <div class="soft-item">Português — nativo</div>
+          <div class="soft-item">Inglês — conversacional</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="en" class="cv-panel">
+<div class="cv">
+  <div class="header">
+    <div class="header-name">Paula Lemes</div>
+    <div class="header-title">Design &amp; Growth Partner</div>
+    <div class="header-contacts">
+      <span>+55 11 98462-8938</span>
+      <a href="mailto:comunicadigital.id@gmail.com">comunicadigital.id@gmail.com</a>
+      <a href="https://linkedin.com/in/paulalemes" target="_blank">linkedin.com/in/paulalemes</a>
+      <a href="https://behance.net/paulalemesperfil" target="_blank">behance.net/paulalemesperfil</a>
+    </div>
+  </div>
+  <div class="layout">
+    <div class="main">
+      <div class="section resumo">
+        <div class="section-label">Summary</div>
+        <p>Creative and strategy partner for brands that need visual consistency and real growth. I work at the intersection of brand identity, digital production, and product launches — weaving editorial design, motion, and content strategy into a single cohesive flow. With clients across Brazil, Portugal, the US, Belgium, and South Africa, my focus is on elevating brand positioning without sacrificing operational fluency.</p>
+      </div>
+      <div class="section">
+        <div class="section-label">Experience</div>
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-role">Growth &amp; Design Partner</span>
+            <span class="exp-period">Oct 2021 – Present</span>
+          </div>
+          <div class="exp-company">Freelance &amp; Consulting</div>
+          <ul class="exp-bullets">
+            <li>Development and management of visual ecosystems for brands and events, ensuring aesthetic consistency across multiple touchpoints — digital and print.</li>
+            <li>Application of digital collage techniques and contemporary aesthetics for brand differentiation and high-perceived-value content.</li>
+            <li>Layout structuring for digital products and educational materials, prioritizing visual clarity and authority.</li>
+            <li>Content strategy and digital launch management, including cross-platform activation and email marketing campaigns.</li>
+            <li>Direct partnership with clients in Brazil, Portugal, the US, Belgium, and South Africa — timeline, priority, and delivery management.</li>
+          </ul>
+        </div>
+        <hr class="divider">
+        <div class="section-label" style="margin-top:1rem;">Selected Projects</div>
+        <div class="proj-item">
+          <div class="proj-name">The Secret Leadership Playbook — South Africa</div>
+          <div class="proj-desc">Creative direction, visual storytelling, and the development of cohesive graphic and video content. Strategic direction and full production of a premium digital product launch targeting North American C-suite executives. Content management, cross-platform activation (LinkedIn, Instagram, TikTok), email marketing campaign, and interactive HTML course materials.</div>
+        </div>
+        <div class="proj-item">
+          <div class="proj-name">Dental&amp;Beer / EuroOdonto — Belgium</div>
+          <div class="proj-desc">Ongoing partnership with two Brazilian dentists based in Belgium. Visual and strategic support through a full brand transition — from dental masterclasses paired with cultural experiences to EuroOdonto, an advisory platform for dentists seeking to validate their credentials in Europe. Currently structuring client qualification documents and commercial presentation for the new phase.</div>
+        </div>
+        <div class="proj-item">
+          <div class="proj-name">Made4Smile - Brazil</div>
+          <div class="proj-desc">End-to-end production of a digital e-book for dentists opening their first practice: market research, visual curation, product build, and pre-launch content strategy with paid media planning. Project on hold, pending launch phase.</div>
+        </div>
+        <div class="proj-item">
+          <div class="proj-name">Talento Total - Brazil/USA</div>
+          <div class="proj-desc">Full visual concept for an in-person event: digital collages, presentation design, and immersive brand experience.</div>
+        </div>
+        <div class="proj-item">
+          <div class="proj-name">Digital Collage for School book cover</div>
+          <div class="proj-desc">Cover design and graphic projects focused on education and technology.</div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="sidebar-section">
+        <div class="section-label">Hard Skills</div>
+        <div class="skills-grid">
+          <div class="skill-tag highlight">Adobe Illustrator</div>
+          <div class="skill-tag highlight">Adobe Photoshop</div>
+          <div class="skill-tag highlight">After Effects</div>
+          <div class="skill-tag highlight">Premiere Pro</div>
+          <div class="skill-tag highlight">InDesign</div>
+          <div class="skill-tag">Basic HTML</div>
+          <div class="skill-tag">Canva Pro</div>
+          <div class="skill-tag">CapCut</div>
+          <div class="skill-tag">Notion / Asana / ClickUp</div>
+          <div class="skill-tag">Mailchimp</div>
+          <div class="skill-tag">Applied Generative AI Tools</div>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="section-label">Soft Skills</div>
+        <div class="soft-list">
+          <div class="soft-item">Project &amp; deadline management</div>
+          <div class="soft-item">International client communication</div>
+          <div class="soft-item">Agile feedback integration</div>
+          <div class="soft-item">Brand strategy vision</div>
+          <div class="soft-item">Visual &amp; editorial curation</div>
+          <div class="soft-item">Autonomy &amp; self-leadership</div>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="section-label">Education &amp; Certifications</div>
+        <div class="cert-list">
+          <div class="cert-item">Business Administration (Technical)<div class="cert-issuer">Senac EAD</div></div>
+          <div class="cert-item">Marketing Scientist<div class="cert-issuer">V4 Company</div></div>
+          <div class="cert-item">Agile Project Management (SCRUM)<div class="cert-issuer">Digital Innovation One</div></div>
+          <div class="cert-item">Design &amp; Digital Advertising<div class="cert-issuer">Comunidade Sobral / Lucas Viana</div></div>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="section-label">Languages</div>
+        <div class="soft-list">
+          <div class="soft-item">Portuguese — native</div>
+          <div class="soft-item">English — conversational</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+  function showTab(lang, btn) {
+    document.querySelectorAll('.cv-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(lang).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
